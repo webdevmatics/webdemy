@@ -47,7 +47,7 @@ class SeriesController extends Controller
      */
     public function show(Series $series)
     {
-        //
+        return view('front.series.show', compact('series'));
     }
 
     /**
@@ -82,5 +82,12 @@ class SeriesController extends Controller
     public function destroy(Series $series)
     {
         //
+    }
+    
+    public function episode(Series $series, $episodeNumber)
+    {
+        $video= $series->videos()->where('episode_number', $episodeNumber)->first();
+
+        return view('front.series.video',compact('series','episodeNumber','video'));
     }
 }

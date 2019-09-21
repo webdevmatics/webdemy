@@ -1,6 +1,7 @@
 <?php
 
 use App\Series;
+use App\Video;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,6 +15,8 @@ class DatabaseSeeder extends Seeder
     {
         // $this->call(UsersTableSeeder::class);
 
-        factory(Series::class, 10)->create();
+        factory(Series::class, 10)->create()->each(function($series){
+            $series->videos()->saveMany(factory(Video::class, 10)->make());
+        });
     }
 }

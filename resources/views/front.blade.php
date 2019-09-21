@@ -12,8 +12,10 @@
             </div>
         </section>
 
-        <section>
+        <section class="mb-5">
             <div>
+                <h3 class="mb-3 text-center">Become full stack developer</h3>
+
                 <b-card-group deck>
                     @foreach($featuredSeries as $series)
                         <b-card title="{{$series->title}}" img-src="https://picsum.photos/300/300/?image=41" img-alt="Image" img-top>
@@ -30,6 +32,8 @@
         </section>
 
         <section>
+            <h3 class="mb-3 text-center">Choose Plan that fits your need</h3>
+
             <pricing></pricing>
 
         </section>
