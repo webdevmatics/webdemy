@@ -11,6 +11,14 @@
 |
 */
 
+use App\Series;
+
 Route::get('/', function () {
-    return view('welcome');
+    $featuredSeries = Series::take(3)->latest()->get();
+    return view('front', compact('featuredSeries'));
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/series', 'SeriesController@index')->name('series.index');
