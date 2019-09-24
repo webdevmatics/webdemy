@@ -18,12 +18,12 @@
 
                 <b-card-group deck>
                     @foreach($featuredSeries as $series)
-                        <b-card title="{{$series->title}}" img-src="https://picsum.photos/300/300/?image=41" img-alt="Image" img-top>
+                        <b-card class="text-center" title="{{$series->title}}" img-src="https://picsum.photos/300/300/?image=41" img-alt="Image" img-top>
                             <b-card-text>
                                 {{ \Str::words($series->description, 10)}}
                             </b-card-text>
                             <template v-slot:footer>
-                                <small class="text-muted">Last updated 3 mins ago</small>
+                                <b-button  href="{{route('series.show', $series)}}" variant="primary">Play</b-button>
                             </template>
                         </b-card>
                     @endforeach

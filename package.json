@@ -24,6 +24,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "@vimeo/player": "^2.10.0",
         "bootstrap-vue": "^2.0.1"
     }
 }

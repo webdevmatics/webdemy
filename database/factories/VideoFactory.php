@@ -10,6 +10,6 @@ $factory->define(Video::class, function (Faker $faker) {
         'title'=>$faker->colorName,
         'description'=> $faker->paragraph(20),
         'series_id'=> $faker->numberBetween(1,10),
-        'episode_number'=> $faker->numberBetween(1,15)
+        'episode_number'=> $faker->numberBetween(1,10)
     ];
 });

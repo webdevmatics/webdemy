@@ -4,9 +4,11 @@
     <b-container>
         <section>
             <h2>Video player</h2>
-            <video width="1000" height="400" controls preload >
-                <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4">
-            </video>
+{{--            <video width="1000" height="400" controls preload >--}}
+{{--                <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4">--}}
+{{--            </video>--}}
+            <b-breadcrumb :items="{{json_encode($breadCrumbs)}}"></b-breadcrumb>
+            <video-player :video="{{$video}}" next-video-url="{{$nextVideoUrl}}"></video-player>
         </section>
 
         <section class="mb-5 pt-5 text-center">
