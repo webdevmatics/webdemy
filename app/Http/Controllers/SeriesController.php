@@ -14,7 +14,7 @@ class SeriesController extends Controller
      */
     public function index()
     {
-        $series = Series::paginate(10);
+        $series = Series::latest()->get();
         return view('front.series.index', compact('series'));
     }
 

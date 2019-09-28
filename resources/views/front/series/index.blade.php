@@ -11,9 +11,13 @@
                             <b-card
                                     title="{{$s->title}}"
                                     class="text-center"
-                                    img-src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSPOs4jT_cgp2si_Jeaz7glQ-l5zJ9PpjQSj4WjG3vMW-1jtCe3" img-alt="Image" img-top>
+{{--                                    img-src="" img-alt="Image" img-top--}}
+                                    img-src="{{$s->image? asset('storage/'.$s->image) : 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSPOs4jT_cgp2si_Jeaz7glQ-l5zJ9PpjQSj4WjG3vMW-1jtCe3'}}" img-alt="Image" img-top
+                            >
                                 <b-card-text>
-                                    {{\Str::words($s->description, 10)}}
+                                    @php $excerpt = \Str::words($s->description, 10) @endphp
+
+                                    {!! $excerpt !!}
                                 </b-card-text>
                                 <template v-slot:footer>
                                     <b-button  href="{{route('series.show', $s->id)}}" variant="primary">Play</b-button>

@@ -23,3 +23,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/series', 'SeriesController');
 Route::get('/series/{series}/episodes/{episodeNumber}', 'SeriesController@episode')->name('series.episode');
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
