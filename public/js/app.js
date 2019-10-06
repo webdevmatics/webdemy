@@ -4173,8 +4173,9 @@ __webpack_require__.r(__webpack_exports__);
 
     console.log('Component mounted.');
     var videoOptions = {
-      id: this.video.vimeo_video_id,
-      width: 500
+      id: 359987235,
+      width: 500,
+      autoplay: true
     };
     var player = new _vimeo_player__WEBPACK_IMPORTED_MODULE_0__["default"]('webdemy-player', videoOptions);
     player.on('ended', function () {

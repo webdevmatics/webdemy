@@ -18,8 +18,9 @@
             console.log('Component mounted.')
 
             var videoOptions = {
-                id: this.video.vimeo_video_id,
-                width: 500
+                id: 359987235,
+                width: 500,
+                autoplay:true
             };
             var player = new Player('webdemy-player', videoOptions);
 

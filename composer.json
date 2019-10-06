@@ -10,6 +10,7 @@
     "require": {
         "php": "^7.2",
         "fideloper/proxy": "^4.0",
+        "laravel/cashier": "^10.3",
         "laravel/framework": "^6.0",
         "laravel/tinker": "^1.0",
         "tcg/voyager": "^1.2"
