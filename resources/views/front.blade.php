@@ -5,7 +5,7 @@
     <div class="container">
         <section>
             <div>
-                <b-jumbotron header="BootstrapVue" lead="Bootstrap v4 Components for Vue.js 2">
+                <b-jumbotron header="Webdevmatics" lead="Bootstrap v4 Components for Vue.js 2">
                     <p>For more information visit website</p>
                     <b-button variant="primary" href="{{route('series.index')}}">Browse Course</b-button>
                 </b-jumbotron>
