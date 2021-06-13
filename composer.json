@@ -13,7 +13,8 @@
         "laravel/cashier": "^10.3",
         "laravel/framework": "^6.0",
         "laravel/tinker": "^1.0",
-        "tcg/voyager": "^1.2"
+        "tcg/voyager": "^1.2",
+        "vimeo/vimeo-api": "^3.0"
     },
     "require-dev": {
         "facade/ignition": "^1.4",

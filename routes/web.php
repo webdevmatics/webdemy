@@ -12,8 +12,13 @@
 */
 
 use App\Series;
+use App\Services\VimeoAPI;
 
-Route::get('/', function () {
+Route::get('/', function (VimeoAPI $api) {
+
+    dd($api->uploadStatus("/videos/562423443"));
+    dd($api->upload(public_path('obs-upload-test.mp4')));
+
     $featuredSeries = Series::take(3)->latest()->get();
     return view('front', compact('featuredSeries'));
 });
