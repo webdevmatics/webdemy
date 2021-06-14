@@ -13,14 +13,15 @@
 
 use App\Series;
 use App\Services\VimeoAPI;
+use Illuminate\Support\Facades\Storage;
+use Vimeo\Laravel\VimeoManager;
 
-Route::get('/', function (VimeoAPI $api) {
+Route::get('/', function (VimeoManager $vimeo) {
 
-    dd($api->uploadStatus("/videos/562423443"));
-    dd($api->upload(public_path('obs-upload-test.mp4')));
+    $uri = '/videos/562872590';
+    $result = $vimeo->request($uri . '?fields=transcode.status');
 
-    $featuredSeries = Series::take(3)->latest()->get();
-    return view('front', compact('featuredSeries'));
+    dd($result);
 });
 
 Auth::routes();
@@ -31,7 +32,13 @@ Route::get('/series/{series}/episodes/{episodeNumber}', 'SeriesController@episod
 
 
 Route::group(['prefix' => 'admin'], function () {
+
+    Route::get('/videos/upload', 'VideoUploadController@create');
+    Route::post('/videos/upload', 'VideoUploadController@store')->name('video-upload.store');
+
+
     Voyager::routes();
+
 });
 
 Route::get('payment', 'PaymentController@payment');

@@ -1,6 +1,7 @@
 <?php
 namespace App\Services;
 
+use Vimeo\Laravel\VimeoManager;
 use Vimeo\Vimeo;
 
 class VimeoAPI
@@ -8,8 +9,8 @@ class VimeoAPI
 
     public $vimeoApi;
 
-    function __construct() {
-        $this->vimeoApi = new Vimeo(env('VIMEO_CLIENT_ID'), env('VIMEO_SECRET'), env('VIMEO_ACCESS_TOKEN'));
+    function __construct(VimeoManager $api) {
+        $this->vimeoApi = $api;
     }
 
     public function get()

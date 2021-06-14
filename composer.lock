@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "45f218e86a449d243644f2f72fb4f275",
+    "content-hash": "eabb4845f1e08f4b6ff69291b90d913c",
     "packages": [
         {
             "name": "ankitpokhrel/tus-php",
@@ -1418,6 +1418,75 @@
                 "source": "https://github.com/fideloper/TrustedProxy/tree/4.4.1"
             },
             "time": "2020-10-22T13:48:01+00:00"
+        },
+        {
+            "name": "graham-campbell/manager",
+            "version": "v4.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GrahamCampbell/Laravel-Manager.git",
+                "reference": "e18c29f98adb770bd890b6d66b27ba4730272599"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Manager/zipball/e18c29f98adb770bd890b6d66b27ba4730272599",
+                "reference": "e18c29f98adb770bd890b6d66b27ba4730272599",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^5.5 || ^6.0 || ^7.0 || ^8.0",
+                "illuminate/support": "^5.5 || ^6.0 || ^7.0 || ^8.0",
+                "php": "^7.1.3 || ^8.0"
+            },
+            "require-dev": {
+                "graham-campbell/analyzer": "^2.4 || ^3.0",
+                "graham-campbell/testbench-core": "^3.2",
+                "mockery/mockery": "^1.3.1",
+                "phpunit/phpunit": "^6.5 || ^7.5 || ^8.4 || ^9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "GrahamCampbell\\Manager\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Graham Campbell",
+                    "email": "graham@alt-three.com"
+                }
+            ],
+            "description": "Manager Provides Some Manager Functionality For Laravel",
+            "keywords": [
+                "Graham Campbell",
+                "GrahamCampbell",
+                "Laravel Manager",
+                "Laravel-Manager",
+                "connector",
+                "framework",
+                "interface",
+                "laravel",
+                "manager"
+            ],
+            "support": {
+                "issues": "https://github.com/GrahamCampbell/Laravel-Manager/issues",
+                "source": "https://github.com/GrahamCampbell/Laravel-Manager/tree/4.6"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/GrahamCampbell",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/graham-campbell/manager",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-07-25T18:02:52+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -6488,6 +6557,80 @@
                 "source": "https://github.com/tijsverkoyen/CssToInlineStyles/tree/2.2.3"
             },
             "time": "2020-07-13T06:12:54+00:00"
+        },
+        {
+            "name": "vimeo/laravel",
+            "version": "5.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vimeo/laravel.git",
+                "reference": "cb1663fa58d9ccf74e89f69fbed28c056780a7af"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vimeo/laravel/zipball/cb1663fa58d9ccf74e89f69fbed28c056780a7af",
+                "reference": "cb1663fa58d9ccf74e89f69fbed28c056780a7af",
+                "shasum": ""
+            },
+            "require": {
+                "graham-campbell/manager": "^4.0",
+                "illuminate/contracts": "^5.8|^6.0|^7.0|^8.0",
+                "illuminate/support": "^5.8|^6.0|^7.0|^8.0",
+                "php": "^7.2|^8.0",
+                "vimeo/vimeo-api": "^3.0.3"
+            },
+            "require-dev": {
+                "graham-campbell/analyzer": "^2.0",
+                "graham-campbell/testbench": "^5.2",
+                "laravel/framework": "^5.8|^6.0|^7.0|^8.0",
+                "laravel/lumen-framework": "^5.7",
+                "mockery/mockery": "^1.0",
+                "phpunit/phpunit": "^7.0",
+                "psalm/plugin-laravel": "^1.4.0",
+                "vimeo/psalm": "^3.17"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Vimeo\\Laravel\\VimeoServiceProvider"
+                    ],
+                    "aliases": {
+                        "Vimeo": "Vimeo\\Laravel\\Facades\\Vimeo"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Vimeo\\Laravel\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Jon Ursenbach",
+                    "email": "jonu@vimeo.com"
+                },
+                {
+                    "name": "Vincent Klaiber",
+                    "email": "hello@vinkla.com",
+                    "homepage": "https://vinkla.com"
+                }
+            ],
+            "description": "A Vimeo bridge for Laravel",
+            "keywords": [
+                "laravel",
+                "video",
+                "vimeo"
+            ],
+            "support": {
+                "issues": "https://github.com/vimeo/laravel/issues",
+                "source": "https://github.com/vimeo/laravel/tree/5.6.1"
+            },
+            "time": "2020-12-20T00:00:23+00:00"
         },
         {
             "name": "vimeo/vimeo-api",
